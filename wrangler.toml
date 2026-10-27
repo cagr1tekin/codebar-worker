@@ -1,0 +1,19 @@
+name = "codebar-worker"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "codebar-db"
+database_id = "aaa0ee5c-a6a6-4dfe-806a-5521b9ac3bd8"
+
+[[r2_buckets]]
+binding = "UPDATES"
+bucket_name = "codebar-updates"
+
+[vars]
+ENVIRONMENT = "production"
+
+# JWT_SECRET → wrangler secret put JWT_SECRET  (deploy öncesi çalıştır)
+# CLAIM_SECRET → wrangler secret put CLAIM_SECRET

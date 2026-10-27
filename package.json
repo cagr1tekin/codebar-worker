@@ -1,0 +1,21 @@
+{
+  "name": "codebar-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply codebar-db --local",
+    "db:migrate": "wrangler d1 migrations apply codebar-db",
+    "secret:jwt": "wrangler secret put JWT_SECRET",
+    "secret:claim": "wrangler secret put CLAIM_SECRET"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "typescript": "^5.5.2",
+    "wrangler": "^3.80.0"
+  },
+  "dependencies": {
+    "hono": "^4.6.10"
+  }
+}
